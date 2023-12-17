@@ -1,12 +1,11 @@
-# Commands that will run on workspace start
 tasks:
     - name: aws-cli
       env:
         AWS_CLI_AUTO_PROMPT: on-partial
       init: 
-        cd ..
+        cd ~/workspace
         curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
-        sudo installer -pkg AWSCLIV2.pkg -target
+        sudo installer -pkg AWSCLIV2.pkg -target /
         cd aws-bootcamp-cruddur-2023
 vscode:
   extensions:
